@@ -61,7 +61,8 @@
 					<h2 class="title-head">Sign Up <span>Now</span></h2>
 					<p>Login Your Account <a href="{{ route('login') }}">Click here</a></p>
 				</div>
-				<form class="contact-bx">
+				<form class="contact-bx" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                    @csrf
 					<div class="row placeani">
 						<div class="col-lg-12">
 							<div class="form-group">
@@ -140,14 +141,14 @@
                         <div class="col-lg-12">
 							<div class="form-group">
 								<div class="input-group">
-									<label>Picture</label><br><br>
+									{{-- <label>Picture</label><br><br>
 									<input id="user_pic" type="file" class=" @error('user_pic') is-invalid @enderror" name="user_pic" value="{{ old('user_pic') }}" required autocomplete="user_pic">
                                     @error('user_pic')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div>
+                                </div> --}}
 							</div>
 						</div>
                         <center>
