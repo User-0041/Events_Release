@@ -349,77 +349,54 @@
 			<div class="row">
 				<!-- Your Profile Views Chart -->
 				<div class="col-lg-12 m-b30">
-				<a href="{{route('events.create') }}" class="btn blue outline radius-xl " style="margin-left:85%; margin-bottom:20px;border:3px solid"><i class="fa fa-fw fa-plus-circle"></i> <b>Add Event</b> </a>
 					<div class="widget-box">
 
 						<div class="wc-title">
-							<h4>Your Events</h4>
+                            <table class="table no-wrap user-table mb-0">
+                                <thead>
+                                  <tr>
+                                    <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Birth day</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Sex</th>
+
+                                  </tr>
+                                </thead>
+
+                                @foreach ($Users as $User)
+                                <tbody>
+                                  <tr>
+                                    <td class="pl-4">{{$User->id}}</td>
+                                    <td>
+                                        <h5 class="font-medium mb-0">{{$User->name}}</h5>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->email}}</span><br>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->date_naiss}}</span><br>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->sex}}</span><br>
+
+                                    </td>
+
+                                    <td>
+                                      <a href={{ route('UserRemove',$User->id) }} type="button"  class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </a>
+
+                                    </td>
+                                  </tr>
+                                  @endforeach
+                                </tbody>
+                            </table>
 
 						</div>
 						<div class="widget-inner">
-                            @foreach ($Events as $event)
-							<div class="card-courses-list admin-courses">
-								<div class="card-courses-media">
-									<img src="{{$event->ev_pic}}" alt=""/>
-								</div>
-								<div class="card-courses-full-dec">
-									<div class="card-courses-title">
-										<h4>{{ $event->ev_name }}</h4>
-									</div>
-									<div class="card-courses-list-bx">
-										<ul class="card-courses-view">
-											<!-- <li class="card-courses-user">
-												<div class="card-courses-user-pic">
-													<img src="PreReq/images/testimonials/pic3.jpg" alt=""/>
-												</div>
-												<div class="card-courses-user-info">
-													<h5>Teacher</h5>
-													<h4>Keny White</h4>
-												</div>
-											</li> -->
-											<li class="card-courses-categories">
-												<h5>Event Date</h5>
-												<h4>{{ $event->ev_date }}</h4>
-											</li>
-											<!-- <li class="card-courses-review">
-												<h5>3 Review</h5>
-												<ul class="cours-star">
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-												</ul>
-											</li>
-											<li class="card-courses-stats">
-												<a href="#" class="btn button-sm green radius-xl">Pending</a>
-											</li> -->
-											<li class="card-courses-price">
-												<h5 class="{{ $event->id }} TND</h5>
-											</li>
-										</ul>
-									</div>
-									<div class="row card-courses-dec">
-										<div class="col-md-12">
-											<h6 class="m-b10">Course Description</h6>
-											<p>{{$event->ev_describ}} </p>
-										</div>
-										<div class="col-md-12">
-                                            <form action="{{ route('events.destroy',$event->id) }}" method="Post">
-                                                <a class="btn btn-primary" href="{{ route('events.edit',$event->id) }}">Edit</a>
-                                                <a class="btn btn-primary" href="{{ route('listparticipants',$event->id) }}">List Participants</a>
 
-												@csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-
-                                                </form>
-										</div>
-									</div>
-
-								</div>
-							</div>
-							@endforeach
 						</div>
 					</div>
 				</div>

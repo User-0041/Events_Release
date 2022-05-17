@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('date_naiss')->nullable();
             $table->integer('num_tel')->nullable();
             $table->String('user_pic')->default("/");
-            $table->set('type', ['ADMINE', 'USER'])->nullable();
+            $table->set('type', ['ADMINE', 'USER'])->default('ADMINE');
             $table->string('class')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -25,7 +25,7 @@
 
 	<!-- FAVICONS ICON ============================================= -->
 	<link rel="icon" href="../error-404.html" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="PreReq/images/favicon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="../PreReq/images/favicon.png" />
 
 	<!-- PAGE TITLE HERE ============================================= -->
 	<title>EduChamp : Education HTML Template </title>
@@ -34,24 +34,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--[if lt IE 9]>
-	<script src="PreReq/js/html5shiv.min.js"></script>
-	<script src="PreReq/js/respond.min.js"></script>
+	<script src="../PreReq/js/html5shiv.min.js"></script>
+	<script src="../PreReq/js/respond.min.js"></script>
 	<![endif]-->
 
 	<!-- All PLUGINS CSS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="PreReq/css/assets.css">
-	<link rel="stylesheet" type="text/css" href="PreReq/vendors/calendar/fullcalendar.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/css/assets.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/vendors/calendar/fullcalendar.css">
 
 	<!-- TYPOGRAPHY ============================================= -->
-	<link rel="stylesheet" type="text/css" href="PreReq/css/typography.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/css/typography.css">
 
 	<!-- SHORTCODES ============================================= -->
-	<link rel="stylesheet" type="text/css" href="PreReq/css/shortcodes/shortcodes.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/css/shortcodes/shortcodes.css">
 
 	<!-- STYLESHEETS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="PreReq/css/style.css">
-	<link rel="stylesheet" type="text/css" href="PreReq/css/dashboard.css">
-	<link class="skin" rel="stylesheet" type="text/css" href="PreReq/css/color/color-1.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../PreReq/css/dashboard.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="../PreReq/css/color/color-1.css">
 
 </head>
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
@@ -69,8 +69,8 @@
 			<div class="ttr-logo-box">
 				<div>
 					<a href="index.html" class="ttr-logo">
-						<img alt="" class="ttr-logo-mobile" src="PreReq/images/logo-mobile.png" width="30" height="30">
-						<img alt="" class="ttr-logo-desktop" src="PreReq/images/logo-white.png" width="160" height="27">
+						<img alt="" class="ttr-logo-mobile" src="../PreReq/images/logo-mobile.png" width="30" height="30">
+						<img alt="" class="ttr-logo-desktop" src="../PreReq/images/logo-white.png" width="160" height="27">
 					</a>
 				</div>
 			</div>
@@ -173,7 +173,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="#" class="ttr-material-button ttr-submenu-toggle"><span class="ttr-user-avatar"><img alt="" src="PreReq/images/testimonials/pic3.jpg" width="32" height="32"></span></a>
+						<a href="#" class="ttr-material-button ttr-submenu-toggle"><span class="ttr-user-avatar"><img alt="" src="../PreReq/images/testimonials/pic3.jpg" width="32" height="32"></span></a>
 						<div class="ttr-header-submenu">
 							<ul>
 								<li><a href="user-profile.html">My profile</a></li>
@@ -236,7 +236,7 @@
 		<div class="ttr-sidebar-wrapper content-scroll">
 			<!-- side menu logo start -->
 			<div class="ttr-sidebar-logo">
-				<a href="#"><img alt="" src="PreReq/images/logo.png" width="122" height="27"></a>
+				<a href="#"><img alt="" src="../PreReq/images/logo.png" width="122" height="27"></a>
 				<!-- <div class="ttr-sidebar-pin-button" title="Pin/Unpin Menu">
 					<i class="material-icons ttr-fixed-icon">gps_fixed</i>
 					<i class="material-icons ttr-not-fixed-icon">gps_not_fixed</i>
@@ -349,77 +349,53 @@
 			<div class="row">
 				<!-- Your Profile Views Chart -->
 				<div class="col-lg-12 m-b30">
-				<a href="{{route('events.create') }}" class="btn blue outline radius-xl " style="margin-left:85%; margin-bottom:20px;border:3px solid"><i class="fa fa-fw fa-plus-circle"></i> <b>Add Event</b> </a>
 					<div class="widget-box">
 
 						<div class="wc-title">
-							<h4>Your Events</h4>
+                            <table class="table no-wrap user-table mb-0">
+                                <thead>
+                                  <tr>
+                                    <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Birth day</th>
+                                    <th scope="col" class="border-0 text-uppercase font-medium">Sex</th>
+
+                                  </tr>
+                                </thead>
+
+                                @foreach ($Users as $User)
+                                <tbody>
+                                  <tr>
+                                    <td class="pl-4">{{$User->User->id}}</td>
+                                    <td>
+                                        <h5 class="font-medium mb-0">{{$User->User->name}}</h5>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->User->email}}</span><br>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->User->date_naiss}}</span><br>
+
+                                    </td>
+                                    <td>
+                                        <span class="text-muted">{{$User->User->sex}}</span><br>
+
+                                    </td>
+
+                                    <td>
+
+                                    </td>
+                                  </tr>
+                                  @endforeach
+                                </tbody>
+                            </table>
 
 						</div>
 						<div class="widget-inner">
-                            @foreach ($Events as $event)
-							<div class="card-courses-list admin-courses">
-								<div class="card-courses-media">
-									<img src="{{$event->ev_pic}}" alt=""/>
-								</div>
-								<div class="card-courses-full-dec">
-									<div class="card-courses-title">
-										<h4>{{ $event->ev_name }}</h4>
-									</div>
-									<div class="card-courses-list-bx">
-										<ul class="card-courses-view">
-											<!-- <li class="card-courses-user">
-												<div class="card-courses-user-pic">
-													<img src="PreReq/images/testimonials/pic3.jpg" alt=""/>
-												</div>
-												<div class="card-courses-user-info">
-													<h5>Teacher</h5>
-													<h4>Keny White</h4>
-												</div>
-											</li> -->
-											<li class="card-courses-categories">
-												<h5>Event Date</h5>
-												<h4>{{ $event->ev_date }}</h4>
-											</li>
-											<!-- <li class="card-courses-review">
-												<h5>3 Review</h5>
-												<ul class="cours-star">
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li class="active"><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-													<li><i class="fa fa-star"></i></li>
-												</ul>
-											</li>
-											<li class="card-courses-stats">
-												<a href="#" class="btn button-sm green radius-xl">Pending</a>
-											</li> -->
-											<li class="card-courses-price">
-												<h5 class="{{ $event->id }} TND</h5>
-											</li>
-										</ul>
-									</div>
-									<div class="row card-courses-dec">
-										<div class="col-md-12">
-											<h6 class="m-b10">Course Description</h6>
-											<p>{{$event->ev_describ}} </p>
-										</div>
-										<div class="col-md-12">
-                                            <form action="{{ route('events.destroy',$event->id) }}" method="Post">
-                                                <a class="btn btn-primary" href="{{ route('events.edit',$event->id) }}">Edit</a>
-                                                <a class="btn btn-primary" href="{{ route('listparticipants',$event->id) }}">List Participants</a>
 
-												@csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-
-                                                </form>
-										</div>
-									</div>
-
-								</div>
-							</div>
-							@endforeach
 						</div>
 					</div>
 				</div>
@@ -430,23 +406,23 @@
 	<div class="ttr-overlay"></div>
 
 <!-- External JavaScripts -->
-<script src="PreReq/js/jquery.min.js"></script>
-<script src="PreReq/vendors/bootstrap/js/popper.min.js"></script>
-<script src="PreReq/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="PreReq/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="PreReq/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="PreReq/vendors/magnific-popup/magnific-popup.js"></script>
-<script src="PreReq/vendors/counter/waypoints-min.js"></script>
-<script src="PreReq/vendors/counter/counterup.min.js"></script>
-<script src="PreReq/vendors/imagesloaded/imagesloaded.js"></script>
-<script src="PreReq/vendors/masonry/masonry.js"></script>
-<script src="PreReq/vendors/masonry/filter.js"></script>
-<script src="PreReq/vendors/owl-carousel/owl.carousel.js"></script>
-<script src='PreReq/vendors/scroll/scrollbar.min.js'></script>
-<script src="PreReq/js/functions.js"></script>
-<script src="PreReq/vendors/chart/chart.min.js"></script>
-<script src="PreReq/js/admin.js"></script>
-<script src='PreReq/vendors/switcher/switcher.js'></script>
+<script src="../PreReq/js/jquery.min.js"></script>
+<script src="../PreReq/vendors/bootstrap/js/popper.min.js"></script>
+<script src="../PreReq/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../PreReq/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../PreReq/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="../PreReq/vendors/magnific-popup/magnific-popup.js"></script>
+<script src="../PreReq/vendors/counter/waypoints-min.js"></script>
+<script src="../PreReq/vendors/counter/counterup.min.js"></script>
+<script src="../PreReq/vendors/imagesloaded/imagesloaded.js"></script>
+<script src="../PreReq/vendors/masonry/masonry.js"></script>
+<script src="../PreReq/vendors/masonry/filter.js"></script>
+<script src="../PreReq/vendors/owl-carousel/owl.carousel.js"></script>
+<script src='../PreReq/vendors/scroll/scrollbar.min.js'></script>
+<script src="../PreReq/js/functions.js"></script>
+<script src="../PreReq/vendors/chart/chart.min.js"></script>
+<script src="../PreReq/js/admin.js"></script>
+<script src='../PreReq/vendors/switcher/switcher.js'></script>
 </body>
 
 <!-- Mirrored from educhamp.themetrades.com/demo/admin/courses.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->

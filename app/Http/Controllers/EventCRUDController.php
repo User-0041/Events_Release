@@ -10,6 +10,7 @@ class EventCRUDController extends Controller
 
 public function index()
 {
+
 $data['Events'] = Event::orderBy('id','desc')->paginate(5);
 return view('events.index', $data);
 }

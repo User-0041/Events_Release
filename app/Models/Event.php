@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
 
-    public function participate(): HasMany
+    public function participate()
     {
         return $this->hasMany(participate::class);
     }

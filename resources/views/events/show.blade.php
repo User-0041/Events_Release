@@ -266,6 +266,7 @@
                     <ul id="masonry" class="ttr-gallery-listing magnific-image row">
                     @foreach ($Events as $event )
 
+
                             <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
                                 <div class="event-bx m-b30">
                                     <div class="action-box">
@@ -286,8 +287,13 @@
 											</ul>
 											<p>{{$event->ev_describ }}</p>
 										</div>
+                                        @if (!$event->part)
+                                        <a href="{{  route('Participate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
 
-                                        <a href="{{  route('Participate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >Participate</a>
+                                        @else
+
+                                        <a href="{{  route('UnParticipate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
+                                        @endif
 									</div>
 								</div>
 							</li>
