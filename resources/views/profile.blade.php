@@ -283,7 +283,7 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="courses">
 										<div class="profile-head">
-											<h3>My Events</h3>
+											<h3>My Courses</h3>
 											<div class="feature-filters style1 ml-auto">
 												<ul class="filters" data-toggle="buttons">
 													<li data-filter="" class="btn active">
@@ -659,7 +659,7 @@
 														<input class="form-control" type="text" value="000702">
 													</div>
 												</div>
-                                            </div>
+
 												<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
 
 												<div class="form-group row">
