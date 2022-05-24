@@ -295,7 +295,6 @@
                                         @else
 
                                         <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
-o-white.png" alt=""/></a>
 						</div>
 						<div class="pt-social-link">
 							<ul class="list-inline m-a0">
