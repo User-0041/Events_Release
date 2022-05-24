@@ -65,7 +65,7 @@
 					<div class="topbar-right">
 						<ul>
 
-                            <li><a href="#">{{$user->name}}</a></li>
+                            <li><a href="#">{{$User->name}}</a></li>
 							<li><a href="login.html">Logout</a></li>
 							<li><a href="register.html">Register</a></li>
 						</ul>
