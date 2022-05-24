@@ -65,7 +65,7 @@
 					<div class="topbar-right">
 						<ul>
 
-                            <li><a href="#">Hajer Noomene</a></li>
+                            <li><a href="#">{{$user->name}}</a></li>
 							<li><a href="login.html">Logout</a></li>
 							<li><a href="register.html">Register</a></li>
 						</ul>
@@ -284,11 +284,11 @@
 											<p>{{$event->ev_describ }}</p>
 										</div>
                                         @if (!$event->part)
-                                        <a href="{{  route('Participate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
+                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
 
                                         @else
 
-                                        <a href="{{  route('UnParticipate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
+                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
                                         @endif
 									</div>
 								</div>
