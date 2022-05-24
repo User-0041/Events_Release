@@ -67,7 +67,7 @@
 						<div class="col-lg-12">
 							<div class="form-group">
 								<div class="input-group">
-									<label>Your tName</label>
+									<label>Your Name</label>
 									<input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -128,7 +128,7 @@
                         <div class="col-lg-12">
 							<div class="form-group">
 								<div class="input-group">
-									<label>date of birth</label><br><br>
+									<label>Date of birth</label><br><br>
 									<input id="date_naiss" type="date" class=" @error('date_naiss') is-invalid @enderror" name="date_naiss" value="{{ old('date_naiss') }}" required autocomplete="date_naiss">
                                     @error('date_naiss')
                                     <span class="invalid-feedback" role="alert">
@@ -177,7 +177,6 @@
 <script src="/PreReq/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/PreReq/js/functions.js"></script>
 <script src="/PreReq/js/contact.js"></script>
-<script src='/PreReq/vendors/switcher/switcher.js'></script>
 </body>
 
 </html>

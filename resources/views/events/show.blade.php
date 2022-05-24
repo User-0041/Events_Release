@@ -64,14 +64,10 @@
 					</div>
 					<div class="topbar-right">
 						<ul>
-							<li>
-								<select class="header-lang-bx">
-									<option data-icon="flag flag-uk">English UK</option>
-									<option data-icon="flag flag-us">English US</option>
-								</select>
-							</li>
-							<li><a href="login.html">Login</a></li>
-							<li><a href="register.html">Register</a></li>
+
+                            <li><a href="#">{{$User->name}}</a></li>
+							<li><a href="login.html">Logout</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -288,11 +284,11 @@
 											<p>{{$event->ev_describ }}</p>
 										</div>
                                         @if (!$event->part)
-                                        <a href="{{  route('Participate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
+                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
 
                                         @else
 
-                                        <a href="{{  route('UnParticipate',[$User,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
+                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
                                         @endif
 									</div>
 								</div>
@@ -429,7 +425,7 @@
 <script src="/PreReq/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/PreReq/js/functions.js"></script>
 <script src="/PreReq/js/contact.js"></script>
-<script src='/PreReq/vendors/switcher/switcher.js'></script>
+
 </body>
 
 </html>
