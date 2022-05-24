@@ -35,7 +35,7 @@ Route::get('/Show_Events', function () {
         }
         return $item;
     });
-    $data['User'] =  Auth::id();
+    $data['User'] =  auth()->user();
     return view('events.show', $data);
 })->middleware('auth')->name("Show_event");
 
