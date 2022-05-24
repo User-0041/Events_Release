@@ -65,7 +65,6 @@
 					<div class="topbar-right">
 						<ul>
 
-                            <li><a href="#">Hajer Noomene</a></li>
                             <li><a href="#">{{$User->name}}</a></li>
 							<li>
                                 <form action="{{route('logout') }}" method="POST">
@@ -295,7 +294,6 @@
                                         @else
 
                                         <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
-
                                         @endif
 									</div>
 								</div>
@@ -317,7 +315,10 @@
 					<div class="d-flex align-items-stretch">
 						<div class="pt-logo mr-auto">
 							<a href="index.html"><img src="/PreReq/images/logo-white.png" alt=""/></a>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 240188bad0f2c66b5d6be64e78ccb0e95262aba5
 						</div>
 						<div class="pt-social-link">
 							<ul class="list-inline m-a0">
