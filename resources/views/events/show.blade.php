@@ -315,6 +315,10 @@
 					<div class="d-flex align-items-stretch">
 						<div class="pt-logo mr-auto">
 							<a href="index.html"><img src="/PreReq/images/logo-white.png" alt=""/></a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 240188bad0f2c66b5d6be64e78ccb0e95262aba5
 						</div>
 						<div class="pt-social-link">
 							<ul class="list-inline m-a0">
