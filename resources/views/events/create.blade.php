@@ -457,7 +457,7 @@
 <script src="/PreReq/js/functions.js"></script>
 <script src="/PreReq/vendors/chart/chart.min.js"></script>
 <script src="/PreReq/js/admin.js"></script>
-<script src='/PreReq/vendors/switcher/switcher.js'></script>
+
 <script>
 // Pricing add
 	function newMenuItem() {

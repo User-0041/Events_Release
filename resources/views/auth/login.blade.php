@@ -124,7 +124,6 @@
 <script src="/PreReq/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/PreReq/js/functions.js"></script>
 <script src="/PreReq/js/contact.js"></script>
-<script src='/PreReq/vendors/switcher/switcher.js'></script>
 </body>
 
 </html>
