@@ -67,7 +67,12 @@
 
                             <li><a href="#">Hajer Noomene</a></li>
                             <li><a href="#">{{$User->name}}</a></li>
-							<li><a href="login.html">Logout</a></li>
+							<li>
+                                <form action="{{route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit">Logout</button>
+                                </form>
+                            </li>
 
 						</ul>
 					</div>
