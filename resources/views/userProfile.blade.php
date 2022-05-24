@@ -362,24 +362,29 @@
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Full Name</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="Mark Andre">
+											<input class="form-control" type="text" value="{{$User->name}}">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Email Address</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="CTO">
+											<input class="form-control" type="text" value="{{$User->email}}">
 										</div>
 									</div>
 
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Phone No.</label>
+										<label class="col-sm-2 col-form-label">Phone Number</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="+120 012345 6789">
+											<input class="form-control" type="text" value="{{$User->num_tel}}">
 										</div>
 									</div>
 
-
+                                    <div class="form-group row">
+										<label class="col-sm-2 col-form-label">Date de naissance</label>
+										<div class="col-sm-7">
+											<input class="form-control" type="date" value="{{$User->date_naiss}}">
+										</div>
+									</div>
 
 									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
 								  </div>

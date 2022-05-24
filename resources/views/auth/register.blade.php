@@ -128,8 +128,8 @@
                         <div class="col-lg-12">
 							<div class="form-group">
 								<div class="input-group">
-									<label>Date of birth</label><br><br>
-									<input id="date_naiss" type="date" class=" @error('date_naiss') is-invalid @enderror" name="date_naiss" value="{{ old('date_naiss') }}" required autocomplete="date_naiss">
+									<label>Date of birth</label><br>
+									<input id="date_naiss" type="date" class="form-control @error('date_naiss') is-invalid @enderror" name="date_naiss" value="{{ old('date_naiss') }}" required autocomplete="date_naiss">
                                     @error('date_naiss')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -150,7 +150,7 @@
                                     @enderror
                                 </div> --}}
 							</div>
-						</div>
+						</div><br><br>
                         <center>
                             <div class="col-lg-12 m-b30">
                                 <button name="submit" type="submit" value="Submit" class="btn button-md">  {{ __('Sign up') }}</button>
