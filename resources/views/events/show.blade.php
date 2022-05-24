@@ -67,7 +67,7 @@
 
                             <li><a href="#">Hajer Noomene</a></li>
 							<li><a href="login.html">Logout</a></li>
-							<li><a href="register.html">Register</a></li>
+
 						</ul>
 					</div>
 				</div>
