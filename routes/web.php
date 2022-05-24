@@ -23,7 +23,9 @@ use App\Http\Controllers\EventCRUDController;
 Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 
-
+Route::get('/Profile',function () {
+    return view('userProfile');
+});
 
 Route::get('/Show_Events', function () {
     $Events = Event::with('participate')->orderBy('id','desc')->paginate(5);
