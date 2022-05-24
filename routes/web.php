@@ -23,8 +23,13 @@ use App\Http\Controllers\EventCRUDController;
 Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 
-Route::get('/Profile',function () {
+Route::get('/userProfile',function () {
     return view('userProfile');
+});
+
+
+Route::get('/Profile',function () {
+    return view('profile');
 });
 
 Route::get('/Show_Events', function () {
