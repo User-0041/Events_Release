@@ -366,18 +366,12 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Occupation</label>
+										<label class="col-sm-2 col-form-label">Email Address</label>
 										<div class="col-sm-7">
 											<input class="form-control" type="text" value="CTO">
 										</div>
 									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Company Name</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="EduChamp">
-											<span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
-										</div>
-									</div>
+
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Phone No.</label>
 										<div class="col-sm-7">
@@ -385,72 +379,11 @@
 										</div>
 									</div>
 
-									<div class="seperator"></div>
 
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3>2. Address</h3>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Address</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="5-S2-20 Dummy City, UK">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">City</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="US">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">State</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="California">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Postcode</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="000702">
-										</div>
-									</div>
 
 									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-
-									<div class="form-group row">
-										<div class="col-sm-10 ml-auto">
-											<h3 class="m-form__section">3. Social Links</h3>
-										</div>
-									</div>
-
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Linkedin</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.linkedin.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Facebook</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.facebook.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Twitter</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.twitter.com">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-2 col-form-label">Instagram</label>
-										<div class="col-sm-7">
-											<input class="form-control" type="text" value="www.instagram.com">
-										</div>
-									</div>
-								</div>
-								<div class="">
+								  </div>
+								  <div class="">
 									<div class="">
 										<div class="row">
 											<div class="col-sm-2">
