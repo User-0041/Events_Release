@@ -69,7 +69,7 @@
 							<li>
                                 <form action="{{route('logout') }}" method="POST">
                                     @csrf
-                                    <button type="submit">Logout</button>
+                                    <button  style="background-color: #4C1864;color:white;border-radius:5px; border:none;width:70PX;height:40px"   type="submit">LOGOUT</button>
                                 </form>
                             </li>
 
