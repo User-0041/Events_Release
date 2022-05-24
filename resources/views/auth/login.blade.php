@@ -69,7 +69,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<label>{{ __('Email Address') }}</label>
-									<input id="email" type="email"  required="" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+									<input id="email" type="email"  required="" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" >
 								</div>
 							</div>
 						</div>
