@@ -69,7 +69,7 @@
 							<li>
                                 <form action="{{route('logout') }}" method="POST">
                                     @csrf
-                                    <button type="submit">Logout</button>
+                                    <button  style="background-color: #4C1864;color:white;border-radius:5px; border:none;width:70PX;height:40px"   type="submit">LOGOUT</button>
                                 </form>
                             </li>
 
@@ -243,6 +243,14 @@
 			<!-- Portfolio  -->
 			<div class="section-area section-sp1 gallery-bx">
 				<div class="container">
+                    @if (empty($Event))
+                    <center>
+                        <div class="alert alert-warning" role="alert" sty style="margin-top:60px;margin-bottom:340px; width:700px;font-family: open sans;font-weight:bold;">
+                           There is no Event
+                          </div>
+                        </center>
+
+                    @else
 					<div class="feature-filters clearfix center m-b40">
 						<ul class="filters" data-toggle="buttons">
 							<li data-filter="" class="btn active">
@@ -263,11 +271,12 @@
 							</li>
 						</ul>
 					</div>
+                    @endif
+
 					<div class="clearfix">
                     <ul id="masonry" class="ttr-gallery-listing magnific-image row">
-                    @foreach ($Events as $event )
 
-
+                        @foreach ($Events as $event )
                             <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
                                 <div class="event-bx m-b30">
                                     <div class="action-box">
@@ -315,10 +324,6 @@
 					<div class="d-flex align-items-stretch">
 						<div class="pt-logo mr-auto">
 							<a href="index.html"><img src="/PreReq/images/logo-white.png" alt=""/></a>
-<<<<<<< HEAD
-=======
-
->>>>>>> 240188bad0f2c66b5d6be64e78ccb0e95262aba5
 						</div>
 						<div class="pt-social-link">
 							<ul class="list-inline m-a0">
