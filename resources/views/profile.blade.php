@@ -283,7 +283,7 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="courses">
 										<div class="profile-head">
-											<h3>My Courses</h3>
+											<h3>My Events</h3>
 											<div class="feature-filters style1 ml-auto">
 												<ul class="filters" data-toggle="buttons">
 													<li data-filter="" class="btn active">
