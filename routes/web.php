@@ -32,6 +32,16 @@ Route::get('/userProfile',function () {
 
 Route::post('/User',function (Request $request){
 
+    $request->validate([
+        'name' => 'required',
+        'email' => 'required',
+        'num_tel' => 'required',
+        ]);
+        $User = User::find(Auth::id());
+        $User->name=$request->name;
+        $User->email=$request->email;
+        $User->num_tel=$request->num_tel;
+        $User->save();
 });
 
 
