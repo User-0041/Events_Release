@@ -24,13 +24,11 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 
 Route::get('/userProfile',function () {
+
     return view('userProfile');
 });
 
 
-Route::get('/Profile',function () {
-    return view('profile');
-});
 
 Route::get('/Show_Events', function () {
     $Events = Event::with('participate')->orderBy('id','desc')->paginate(5);
