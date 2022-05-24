@@ -9,44 +9,44 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 	<meta name="robots" content="" />
-	
+
 	<!-- DESCRIPTION -->
 	<meta name="description" content="EduChamp : Education HTML Template" />
-	
+
 	<!-- OG -->
 	<meta property="og:title" content="EduChamp : Education HTML Template" />
 	<meta property="og:description" content="EduChamp : Education HTML Template" />
 	<meta property="og:image" content="" />
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<!-- FAVICONS ICON ============================================= -->
 	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
-	
+
 	<!-- PAGE TITLE HERE ============================================= -->
 	<title>EduChamp : Education HTML Template </title>
-	
+
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.min.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
-	
+
 	<!-- All PLUGINS CSS ============================================= -->
 	<link rel="stylesheet" type="text/css" href="assets/css/assets.css">
-	
+
 	<!-- TYPOGRAPHY ============================================= -->
 	<link rel="stylesheet" type="text/css" href="assets/css/typography.css">
-	
+
 	<!-- SHORTCODES ============================================= -->
 	<link rel="stylesheet" type="text/css" href="assets/css/shortcodes/shortcodes.css">
-	
+
 	<!-- STYLESHEETS ============================================= -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
-	
+
 </head>
 <body id="bg">
 <div class="page-wraper">
@@ -115,7 +115,7 @@
 						<div class="menu-logo">
 							<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
 						</div>
-                        <ul class="nav navbar-nav">	
+                        <ul class="nav navbar-nav">
 							<li class="active"><a href="javascript:;">Home <i class="fa fa-chevron-down"></i></a>
 								<ul class="sub-menu">
 									<li><a href="index.html">Home 1</a></li>
@@ -246,19 +246,19 @@
 						<ul class="filters" data-toggle="buttons">
 							<li data-filter="" class="btn active">
 								<input type="radio">
-								<a href="#"><span>All</span></a> 
+								<a href="#"><span>All</span></a>
 							</li>
 							<li data-filter="happening" class="btn">
 								<input type="radio">
-								<a href="#"><span>Happening</span></a> 
+								<a href="#"><span>Happening</span></a>
 							</li>
 							<li data-filter="upcoming" class="btn">
 								<input type="radio">
-								<a href="#"><span>Upcoming</span></a> 
+								<a href="#"><span>Upcoming</span></a>
 							</li>
 							<li data-filter="expired" class="btn">
 								<input type="radio">
-								<a href="#"><span>Expired</span></a> 
+								<a href="#"><span>Expired</span></a>
 							</li>
 						</ul>
 					</div>
@@ -446,7 +446,7 @@
 										<input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
 										<span class="input-group-btn">
 											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
-										</span> 
+										</span>
 									</div>
 								</form>
 							</div>
@@ -533,7 +533,7 @@
 <script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="assets/js/functions.js"></script>
 <script src="assets/js/contact.js"></script>
-<script src='assets/vendors/switcher/switcher.js'></script>
+
 </body>
 
 </html>
