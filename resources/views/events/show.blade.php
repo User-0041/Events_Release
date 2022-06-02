@@ -243,14 +243,18 @@
 			<!-- Portfolio  -->
 			<div class="section-area section-sp1 gallery-bx">
 				<div class="container">
-                    @if (empty($Event))
+
                     <center>
-                        <div class="alert alert-warning" role="alert" sty style="margin-top:60px;margin-bottom:340px; width:700px;font-family: open sans;font-weight:bold;">
+                        @if ($Events->count()==0)
+                        <div class="alert alert-warning" role="alert"  >
                            There is no Event
                           </div>
+                          @else
                         </center>
 
-                    @else
+                </div>
+
+
 					<div class="feature-filters clearfix center m-b40">
 						<ul class="filters" data-toggle="buttons">
 							<li data-filter="" class="btn active">
