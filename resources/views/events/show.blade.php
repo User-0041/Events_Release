@@ -281,9 +281,10 @@
                     <ul  style="list-style: none;" id="masonry" class="ttr-gallery-listing magnific-image row">
 
                         @foreach ($Events as $event )
-                            <li  class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
+                            <li style="height: 362px;
+                            width: 600px;" class="action-card col-lg-6 col-md-6 col-sm-12  upcoming" >
                                 <div class="event-bx m-b30">
-                                    <div class="action-box">
+                                    <div class="action-box" >
                                         <img src="{{$event->ev_pic}}" alt="">
 									</div>
 									<div class="info-bx d-flex">
@@ -298,15 +299,17 @@
 											<ul class="media-post">
                                                 <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
 												<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
+                                                <br>
+                                               $ <li><a href="#"> Prix:200$</a></li>
 											</ul>
 											<p>{{$event->ev_describ }}</p>
 										</div>
                                         @if (!$event->part)
-                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
+                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:20px ;font-weight: bold"  >Participate</a>
 
                                         @else
 
-                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
+                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:20px ;font-weight: bold"  >UnParticipate</a>
                                         @endif
 									</div>
 								</div>
