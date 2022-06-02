@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- Mirrored from educhamp.themetrades.com/demo/admin/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
 <head>
 
@@ -351,8 +350,11 @@
 						<div class="wc-title">
 							<h4>User Profile</h4>
 						</div>
+
 						<div class="widget-inner">
-							<form class="edit-profile m-b30">
+							<form action="{{route('UserUpdate')}}" method="POST" enctype="multipart/form-data" class="edit-profile m-b30">
+
+                                @csrf
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10  ml-auto">
@@ -362,27 +364,48 @@
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Full Name</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="{{$User->name}}">
+											<input class="form-control" name="name" type="text" value="{{$User->name}}">
+                                            @error('name')
+
+
+											<small class="text-danger"><{{ $message }}></small>
+                                            @enderror
 										</div>
+
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Email Address</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="{{$User->email}}">
+											<input class="form-control" name="email" type="text" value="{{$User->email}}">
+                                            @error('email')
+
+
+											<small class="text-danger"><{{ $message }}></small>
+                                            @enderror
 										</div>
 									</div>
 
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Phone Number</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="text" value="{{$User->num_tel}}">
+											<input class="form-control"   name="num_tel"  type="text" value="{{$User->num_tel}}">
+                                            @error('num_tel')
+
+
+											<small class="text-danger"><{{ $message }}></small>
+                                            @enderror
 										</div>
 									</div>
 
                                     <div class="form-group row">
 										<label class="col-sm-2 col-form-label">Date de naissance</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="date" value="{{$User->date_naiss}}">
+											<input class="form-control" type="date" name="date_naiss" value="{{$User->date_naiss}}">
+                                            @error('date_naiss')
+
+
+											<small class="text-danger"><{{ $message }}></small>
+                                            @enderror
 										</div>
 									</div>
 
@@ -394,7 +417,7 @@
 											<div class="col-sm-2">
 											</div>
 											<div class="col-sm-7">
-												<button type="reset" class="btn">Save changes</button>
+												<button type="submit" class="btn">Save changes</button>
 												<button type="reset" class="btn-secondry">Cancel</button>
 											</div>
 										</div>

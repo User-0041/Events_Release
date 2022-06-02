@@ -25,26 +25,37 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 Route::get('/userProfile',function () {
     $data['User'] =  auth()->user();
-
-
     return view('userProfile',$data);
 })->middleware('auth')->name("userProfile");;
 
 
 Route::post('/User',function (Request $request){
-    if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
+
 
     $request->validate([
         'name' => 'required',
         'email' => 'required',
         'num_tel' => 'required',
+        'date_naiss' => 'required',
         ]);
+
         $User = User::find(Auth::id());
         $User->name=$request->name;
         $User->email=$request->email;
         $User->num_tel=$request->num_tel;
         $User->save();
-})->middleware('auth');;
+
+        Auth::setUser($User);
+        $data['User'] =  auth()->user();
+
+        return redirect()->route('userProfile');
+
+})->middleware('auth')->name("UserUpdate");
+
+
+
+
 
 
 
