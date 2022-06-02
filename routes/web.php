@@ -25,11 +25,16 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 Route::get('/userProfile',function () {
     $data['User'] =  auth()->user();
+
+
     return view('userProfile',$data);
 })->middleware('auth')->name("userProfile");;
 
 Route::get('/Profile',function () {
     $data['User'] =  auth()->user();
+    $data['Events']=participate::with('Event')->where('user_id',auth()->user()->id) ->orderBy('id','desc')->get();
+
+
     return view('Profile',$data);
 })->middleware('auth')->name("Profile");;
 Route::post('/User',function (Request $request){
