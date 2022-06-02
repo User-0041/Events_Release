@@ -413,11 +413,11 @@
 														<div class="form-group col-12">
 															<label class="col-form-label">Event Price</label>
 															<div>
-																{{-- <input class="form-control" name="ev_price" type="text" value="">
+																<input class="form-control" name="ev_price" type="text" value="">
 
                                                                 @error('ev_price')
                                                                 <small class="text-danger"><{{ $message }}></small>
-                                                                @enderror --}}
+                                                                @enderror
 															</div>
 														</div>
 													</div>

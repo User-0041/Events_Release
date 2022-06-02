@@ -388,12 +388,13 @@
 									<div class="form-group col-12">
 										<label class="col-form-label">Event description</label>
 										<div>
-											<textarea class="form-control"  name="ev_describ"> {{ $event->ev_describ }}</textarea>
+                                            <textarea class="form-control"  name="ev_describ"> {{ $event->ev_describ }}</textarea>
                                             @error('ev_describ')
 											<small class="text-danger"><{{ $message }}></small>
                                             @enderror
 										</div>
 									</div>
+
 									<div class="col-12">
 										<table id="item-add" style="width:100%;">
 											<tr class="list-item">
@@ -414,11 +415,11 @@
 														<div class="form-group col-12">
 															<label class="col-form-label">Event Price</label>
 															<div>
-																{{-- <input class="form-control" name="ev_price" type="text" value="">
+																<input class="form-control" name="ev_price" type="text" value="{{$event->ev_price}}">
 
                                                                 @error('ev_price')
                                                                 <small class="text-danger"><{{ $message }}></small>
-                                                                @enderror --}}
+                                                                @enderror
 															</div>
 														</div>
 													</div>

@@ -243,14 +243,18 @@
 			<!-- Portfolio  -->
 			<div class="section-area section-sp1 gallery-bx">
 				<div class="container">
-                    @if (empty($Event))
+
                     <center>
-                        <div class="alert alert-warning" role="alert" sty style="margin-top:60px;margin-bottom:340px; width:700px;font-family: open sans;font-weight:bold;">
+                        @if ($Events->count()==0)
+                        <div class="alert alert-warning" role="alert"  >
                            There is no Event
                           </div>
+                          @else
                         </center>
 
-                    @else
+                </div>
+
+
 					<div class="feature-filters clearfix center m-b40">
 						<ul class="filters" data-toggle="buttons">
 							<li data-filter="" class="btn active">
@@ -274,13 +278,13 @@
                     @endif
 
 					<div class="clearfix">
-                    <ul id="masonry" class="ttr-gallery-listing magnific-image row">
+                    <ul  style="list-style: none;" id="masonry" class="ttr-gallery-listing magnific-image row">
 
                         @foreach ($Events as $event )
-                            <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
+                            <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming" >
                                 <div class="event-bx m-b30">
-                                    <div class="action-box">
-                                        <img src="{{$event->ev_pic}}" alt="">
+                                    <div class="action-box" style="width:100%;height:250px">
+                                        <img   src="{{$event->ev_pic}}" alt="">
 									</div>
 									<div class="info-bx d-flex">
                                         <div>
@@ -294,15 +298,17 @@
 											<ul class="media-post">
                                                 <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
 												<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
+                                                <br>
+                                               $ <li><a href="#"> Prix:200$</a></li>
 											</ul>
 											<p>{{$event->ev_describ }}</p>
 										</div>
                                         @if (!$event->part)
-                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >participate</a>
+                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:52px ;font-weight: bold"  >Participate</a>
 
                                         @else
 
-                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height=55"  >UnParticipate</a>
+                                        <a href="{{  route('UnParticipate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:20px ;font-weight: bold"  >UnParticipate</a>
                                         @endif
 									</div>
 								</div>
