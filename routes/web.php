@@ -25,12 +25,13 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 Route::get('/userProfile',function () {
     $data['User'] =  auth()->user();
-// dd($data);
-    return view('userProfile',$data);
-});
+
+    return view('userProfile');
+})->middleware('auth')->name("userProfile");;
 
 
 Route::post('/User',function (Request $request){
+    if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
 
     $request->validate([
         'name' => 'required',
@@ -42,7 +43,7 @@ Route::post('/User',function (Request $request){
         $User->email=$request->email;
         $User->num_tel=$request->num_tel;
         $User->save();
-});
+})->middleware('auth');;
 
 
 
@@ -86,18 +87,21 @@ Route::get('/UnParticipate/{user}/{event}', function ($id,$eid) {
 
 
 Route::get('/listparticipants/{id}', function ($id) {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
     $data['Users']=participate ::with('User')->where('event_id',$id) ->orderBy('id','desc')->paginate(5);
-
     return view('showStudentsV2', $data);
-})->name('listparticipants');
+})->middleware('auth')->name('listparticipants');
 
 
 
 
 Route::get('/Users', function () {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
 $data['Users']=User::where('type','USER')->orderBy('id','desc')->paginate(5);
 return view('showStudents', $data);
-})->name('/Users');
+})->middleware('auth')->name('/Users');
+
 
 
 

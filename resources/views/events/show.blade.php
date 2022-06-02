@@ -209,7 +209,14 @@
                             <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming" >
                                 <div class="event-bx m-b30">
                                     <div class="action-box" style="width:100%;height:250px">
-                                        <img   src="{{$event->ev_pic}}" alt="">
+                                        <img   src="{{$event->ev_pic}}" style="  display: block;
+
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        width: 100%     ;
+                                        height:100%;
+                                        "
+                                        >
 									</div>
 									<div class="info-bx d-flex">
                                         <div>

@@ -10,6 +10,7 @@ class EventCRUDController extends Controller
 
 public function index()
 {
+    if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
 
 $data['Events'] = Event::orderBy('id','desc')->paginate(5);
 return view('events.index', $data);
@@ -18,11 +19,14 @@ return view('events.index', $data);
 
 public function create()
 {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
 return view('events.create');
 }
 
 public function store(Request $request)
 {
+    if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
 
 $request->validate([
 'ev_name' => 'required',
@@ -50,6 +54,8 @@ return redirect()->route('events.index');
 
 public function destroy(Event $event)
 {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
 $event->delete();
 return redirect()->route('events.index');
 }
@@ -57,11 +63,15 @@ return redirect()->route('events.index');
 
 public function edit(Event $event)
 {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
 return view('events.edit',compact('event'));
 }
 
 public function update(Request $request, $id)
 {
+if(auth()->user()->type!="ADMINE"){return 'ACCSES DENIED';}
+
 $request->validate([
     'ev_name' => 'required',
     'ev_describ' => 'required',
