@@ -107,8 +107,8 @@
 							<div class="form-group">
 								<div class="input-group">
                                     <label>Gender</label><br><br>
-                                    <input type="checkbox" id="sex" name="sex" value="F">Female
-                                    <input type="checkbox" id="sex" name="sex" value="M">Male
+                                    <input type="radio" id="sex" name="sex" value="F">Female
+                                    <input type="radio" id="sex" name="sex" value="M">Male
                                 </div>
 							</div>
 						</div>
