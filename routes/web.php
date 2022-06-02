@@ -26,7 +26,8 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 Route::get('/userProfile',function () {
     $data['User'] =  auth()->user();
 
-    return view('userProfile');
+
+    return view('userProfile',$data);
 })->middleware('auth')->name("userProfile");;
 
 
