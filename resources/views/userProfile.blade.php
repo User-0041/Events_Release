@@ -424,7 +424,9 @@
 									</div>
 								</div>
 							</form>
-							<form class="edit-profile">
+							<form  action="{{route('changepassword')}}" method="POST" enctype="multipart/form-data" class="edit-profile">
+                                @csrf
+
 								<div class="">
 									<div class="form-group row">
 										<div class="col-sm-10 ml-auto">
@@ -434,19 +436,19 @@
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Current Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
+											<input name="current_password" class="form-control" type="password" value="">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">New Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
+											<input name="new_password" class="form-control" type="password" value="">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-2 col-form-label">Re Type Password</label>
 										<div class="col-sm-7">
-											<input class="form-control" type="password" value="">
+											<input name="new_confirm_password" class="form-control" type="password" value="">
 										</div>
 									</div>
 								</div>
@@ -454,7 +456,7 @@
 									<div class="col-sm-2">
 									</div>
 									<div class="col-sm-7">
-										<button type="reset" class="btn">Save changes</button>
+										<button type="submit" class="btn">Save changes</button>
 										<button type="reset" class="btn-secondry">Cancel</button>
 									</div>
 								</div>

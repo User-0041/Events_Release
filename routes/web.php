@@ -8,7 +8,7 @@ use App\Models\User;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
-
+use App\Rules\MatchOldPassword;
 use App\Http\Controllers\EventCRUDController;
 /*
 |--------------------------------------------------------------------------
@@ -51,10 +51,33 @@ Route::post('/User',function (Request $request){
 
         return redirect()->route('userProfile');
 
-})->middleware('auth')->name("UserUpdate");
+})->middleware('auth')->middleware('auth')->name("UserUpdate");
+
+
+Route::post('/changepassword', function(Request $request) {
+
+
+    $request->validate([
+
+        'current_password' => ['required', new MatchOldPassword],
+
+        'new_password' => ['required'],
+
+        'new_confirm_password' => ['same:new_password'],
+
+    ]);
 
 
 
+    $User = User::find(Auth::id());
+
+    $User->password = Hash::make($request->password);
+    $User->save();
+
+    return redirect()->route('userProfile');
+
+
+})->middleware('auth')->name('changepassword');
 
 
 
