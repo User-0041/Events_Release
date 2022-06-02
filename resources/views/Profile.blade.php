@@ -304,18 +304,18 @@
 										</div>
 										<div class="courses-filter">
 											<div class="clearfix">
-                                                @foreach (Events as Event )
+                                                @foreach ($Events as $event )
 
 
 												<ul style="list-style: none" id="masonry" class="ttr-gallery-listing magnific-image row">
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="{{ Event->Event->env_pic}}" alt="">
+																<img src="{{ $event->Event->env_pic}}" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
-																<h5><a href="">{{ Event->Event->env_name}}</a></h5>
+																<h5><a href="">{{ $event->Event->env_name}}</a></h5>
 																<span>Programming</span>
 															</div>
 															<div class="cours-more-info">
