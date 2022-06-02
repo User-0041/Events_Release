@@ -28,7 +28,10 @@ Route::get('/userProfile',function () {
     return view('userProfile',$data);
 })->middleware('auth')->name("userProfile");;
 
-
+Route::get('/Profile',function () {
+    $data['User'] =  auth()->user();
+    return view('Profile',$data);
+})->middleware('auth')->name("Profile");;
 Route::post('/User',function (Request $request){
 
 
