@@ -197,9 +197,9 @@
 									<li><a href="blog-details.html">Blog Details</a></li>
 								</ul>
 							</li>
-							<li class="nav-dashboard"><a href="javascript:;">Dashboard <i class="fa fa-chevron-down"></i></a>
+							{{-- <li class="nav-dashboard"><a href="javascript:;">Dashboard <i class="fa fa-chevron-down"></i></a>
 								<ul class="sub-menu">
-									<li><a href="admin/index.html">Dashboard</a></li>
+
 									<li><a href="admin/add-listing.html">Add Listing</a></li>
 									<li><a href="admin/bookmark.html">Bookmark</a></li>
 									<li><a href="admin/courses.html">Courses</a></li>
@@ -211,14 +211,14 @@
 											<li><a href="admin/basic-calendar.html">Basic Calendar</a></li>
 											<li><a href="admin/list-view-calendar.html">List View Calendar</a></li>
 										</ul>
-									</li>
-									<li><a href="javascript:;">Mailbox<i class="fa fa-angle-right"></i></a>
+									</li> --}}
+									{{-- <li><a href="javascript:;">Mailbox<i class="fa fa-angle-right"></i></a>
 										<ul class="sub-menu">
 											<li><a href="admin/mailbox.html">Mailbox</a></li>
 											<li><a href="admin/mailbox-compose.html">Compose</a></li>
 											<li><a href="admin/mailbox-read.html">Mail Read</a></li>
 										</ul>
-									</li>
+									</li> --}}
 								</ul>
 							</li>
 						</ul>

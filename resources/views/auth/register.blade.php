@@ -150,7 +150,7 @@
                                     @enderror
                                 </div> --}}
 							</div>
-						</div>
+						</div><br><br>
                         <center>
                             <div class="col-lg-12 m-b30">
                                 <button name="submit" type="submit" value="Submit" class="btn button-md">  {{ __('Sign up') }}</button>
