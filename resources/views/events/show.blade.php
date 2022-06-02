@@ -65,7 +65,7 @@
 					<div class="topbar-right">
 						<ul>
 
-                            <li><a href="{{ route('userProfile')}}">{{$User->name}}</a></li>
+                            <li><a href="{{ route('Profile')}}">{{$User->name}}</a></li>
 							<li>
                                 <form action="{{route('logout') }}" method="POST">
                                     @csrf
