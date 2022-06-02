@@ -245,12 +245,13 @@
 					 <div class="row">
 						<div class="col-lg-3 col-md-4 col-sm-12 m-b30">
 							<div class="profile-bx text-center">
-								<div class="user-profile-thumb">
-									<img src="PreReq/images/profile/pic1.jpg" alt=""/>
-								</div>
+								<br>
 								<div class="profile-info">
-									<h4>Mark Andre</h4>
-									<span>mark.example@info.com</span>
+									<h4> {{$User->name}}</h4>
+                                    <span style="color: rgb(106, 2, 106);font-weight: bold">adresse email</span>
+									<span> {{$User->email}}</span><br>
+                                    <span style="color: rgb(106, 2, 106);font-weight: bold">Date de naissance</span><br>
+                                    <span>{{$User->date_naiss}}</span>
 								</div>
 								<div class="profile-social">
 									<ul class="list-inline m-a0">
@@ -283,7 +284,7 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="courses">
 										<div class="profile-head">
-											<h3>My Courses</h3>
+											<h3>Your events</h3>
 											<div class="feature-filters style1 ml-auto">
 												<ul class="filters" data-toggle="buttons">
 													<li data-filter="" class="btn active">
@@ -303,19 +304,22 @@
 										</div>
 										<div class="courses-filter">
 											<div class="clearfix">
-												<ul id="masonry" class="ttr-gallery-listing magnific-image row">
+                                                @foreach (Events as Event )
+
+
+												<ul style="list-style: none" id="masonry" class="ttr-gallery-listing magnific-image row">
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="PreReq/images/courses/pic1.jpg" alt="">
+																<img src="{{ Event->Event->env_pic}}" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
+																<h5><a href="">{{ Event->Event->env_name}}</a></h5>
 																<span>Programming</span>
 															</div>
 															<div class="cours-more-info">
-																<div class="review">
+																{{-- <div class="review">
 																	<span>3 Review</span>
 																	<ul class="cours-star">
 																		<li class="active"><i class="fa fa-star"></i></li>
@@ -324,7 +328,7 @@
 																		<li><i class="fa fa-star"></i></li>
 																		<li><i class="fa fa-star"></i></li>
 																	</ul>
-																</div>
+																</div> --}}
 																<div class="price">
 																	<del>$190</del>
 																	<h5>$120</h5>
@@ -332,231 +336,9 @@
 															</div>
 														</div>
 													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic2.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic3.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic4.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic5.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic6.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic7.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 book">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic8.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
-														<div class="cours-bx">
-															<div class="action-box">
-																<img src="PreReq/images/courses/pic9.jpg" alt="">
-																<a href="#" class="btn">Read More</a>
-															</div>
-															<div class="info-bx text-center">
-																<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-																<span>Programming</span>
-															</div>
-															<div class="cours-more-info">
-																<div class="review">
-																	<span>3 Review</span>
-																	<ul class="cours-star">
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li class="active"><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																		<li><i class="fa fa-star"></i></li>
-																	</ul>
-																</div>
-																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
-																</div>
-															</div>
-														</div>
-													</li>
+
 												</ul>
+                                                @endforeach
 											</div>
 										</div>
 									</div>
