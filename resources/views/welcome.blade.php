@@ -78,7 +78,7 @@
 							</li>
                             @if (Route::has('login'))
                             @auth
-                            <li><a href="{{ url('/home') }}">Home</a></li>
+                            <li><a href="{{ url('/home') }}">Event</a></li>
                             @else
 							<li><a href="{{ route('login') }}">Login</a></li>
                             @if (Route::has('register'))
@@ -334,7 +334,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better
+
 							</div>
 
 							<!-- LAYER NR. 3 -->
