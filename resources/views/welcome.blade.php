@@ -356,8 +356,8 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-							</div>
+
+                            </div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn "
 								id="slide-100-layer-5"
@@ -514,7 +514,6 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
 							</div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn "

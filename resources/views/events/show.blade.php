@@ -274,10 +274,10 @@
                     @endif
 
 					<div class="clearfix">
-                    <ul id="masonry" class="ttr-gallery-listing magnific-image row">
+                    <ul  style="list-style: none;" id="masonry" class="ttr-gallery-listing magnific-image row">
 
                         @foreach ($Events as $event )
-                            <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
+                            <li  class="action-card col-lg-6 col-md-6 col-sm-12  upcoming">
                                 <div class="event-bx m-b30">
                                     <div class="action-box">
                                         <img src="{{$event->ev_pic}}" alt="">
