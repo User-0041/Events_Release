@@ -19,6 +19,7 @@ return new class extends Migration
             $table->String('ev_name');
             $table->String('ev_describ');
             $table->String('ev_pic')->default("/");
+            $table->float('ev_price')->nullable();
             $table->date('ev_date');
 
         });

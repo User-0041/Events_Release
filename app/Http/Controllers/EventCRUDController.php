@@ -29,6 +29,7 @@ $request->validate([
 'ev_describ' => 'required',
 'ev_date' => 'required',
 'image' => 'required|image',
+'ev_price'=>'required'
 ]);
 
 
@@ -41,6 +42,7 @@ $event->ev_pic= '/images/'.$imageName;
 $event->ev_name = $request->ev_name;
 $event->ev_describ = $request->ev_describ;
 $event->ev_date = $request->ev_date;
+$event->ev_price=$request->ev_price;
 $event->save();
 return redirect()->route('events.index');
 }
@@ -65,6 +67,8 @@ $request->validate([
     'ev_describ' => 'required',
     'ev_date' => 'required',
     'image' => 'required|image',
+    'ev_price'=>'required'
+
 ]);
 $imageName = time().'.'.$request->image->extension();
 $request->image->move(public_path('images'), $imageName);
@@ -75,6 +79,8 @@ $event->ev_pic= '/images/'.$imageName;
 $event->ev_name = $request->ev_name;
 $event->ev_describ = $request->ev_describ;
 $event->ev_date = $request->ev_date;
+$event->ev_price=$request->ev_price;
+
 $event->save();
 return redirect()->route('events.index');
 }
