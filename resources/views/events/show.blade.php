@@ -281,11 +281,10 @@
                     <ul  style="list-style: none;" id="masonry" class="ttr-gallery-listing magnific-image row">
 
                         @foreach ($Events as $event )
-                            <li style="height: 362px;
-                            width: 600px;" class="action-card col-lg-6 col-md-6 col-sm-12  upcoming" >
+                            <li class="action-card col-lg-6 col-md-6 col-sm-12  upcoming" >
                                 <div class="event-bx m-b30">
-                                    <div class="action-box" >
-                                        <img src="{{$event->ev_pic}}" alt="">
+                                    <div class="action-box" style="width:100%;height:250px">
+                                        <img   src="{{$event->ev_pic}}" alt="">
 									</div>
 									<div class="info-bx d-flex">
                                         <div>
@@ -305,7 +304,7 @@
 											<p>{{$event->ev_describ }}</p>
 										</div>
                                         @if (!$event->part)
-                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:20px ;font-weight: bold"  >Participate</a>
+                                        <a href="{{  route('Participate',[$User->id,$event->id])}}" class="btn btn-primery "  style="height:55px;padding:52px ;font-weight: bold"  >Participate</a>
 
                                         @else
 
