@@ -20,8 +20,8 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+	<link rel="icon" href="PreReq/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="PreReq/images/favicon.png" />
 
 	<!-- PAGE TITLE HERE ============================================= -->
 	<title>EduChamp : Education HTML Template </title>
@@ -30,22 +30,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.min.js"></script>
-	<script src="assets/js/respond.min.js"></script>
+	<script src="PreReq/js/html5shiv.min.js"></script>
+	<script src="PreReq/js/respond.min.js"></script>
 	<![endif]-->
 
 	<!-- All PLUGINS CSS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/assets.css">
+	<link rel="stylesheet" type="text/css" href="PreReq/css/assets.css">
 
 	<!-- TYPOGRAPHY ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/typography.css">
+	<link rel="stylesheet" type="text/css" href="PreReq/css/typography.css">
 
 	<!-- SHORTCODES ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/shortcodes/shortcodes.css">
+	<link rel="stylesheet" type="text/css" href="PreReq/css/shortcodes/shortcodes.css">
 
 	<!-- STYLESHEETS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
+	<link rel="stylesheet" type="text/css" href="PreReq/css/style.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="PreReq/css/color/color-1.css">
 
 </head>
 <body id="bg">
@@ -83,7 +83,7 @@
                 <div class="container clearfix">
 					<!-- Header Logo ==== -->
 					<div class="menu-logo">
-						<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+						<a href="index.html"><img src="PreReq/images/logo.png" alt=""></a>
 					</div>
 					<!-- Mobile Nav Button ==== -->
                     <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,7 +114,7 @@
 					<!-- Navigation Menu ==== -->
                     <div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
 						<div class="menu-logo">
-							<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+							<a href="index.html"><img src="PreReq/images/logo.png" alt=""></a>
 						</div>
                         <ul class="nav navbar-nav">
 							<li class="active"><a href="javascript:;">Home <i class="fa fa-chevron-down"></i></a>
@@ -168,7 +168,7 @@
 										</ul>
 									</li>
 									<li class="add-menu-right">
-										<img src="assets/images/adv/adv.jpg" alt=""/>
+										<img src="PreReq/images/adv/adv.jpg" alt=""/>
 									</li>
 								</ul>
 							</li>
@@ -221,7 +221,7 @@
     <!-- Content -->
     <div class="page-content bg-white">
         <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner3.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(PreReq/images/banner/banner3.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
                     <h1 class="text-white">Contact Us 1</h1>
@@ -264,7 +264,7 @@
 						</div>
 					</div>
 					<div class="col-lg-7 col-md-7">
-						<form class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/assets/script/contact.php">
+						<form  action="{{route('send-email')}}" method="POST" enctype="multipart/form-data" class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/PreReq/script/contact.php">
 						<div class="ajax-message"></div>
 							<div class="heading-bx left">
 								<h2 class="title-head">Get In <span>Touch</span></h2>
@@ -275,7 +275,7 @@
 									<div class="form-group">
 										<div class="input-group">
 											<label>Your Name</label>
-											<input name="name" type="text" required class="form-control valid-character">
+											<input name="name" name="" type="text" required class="form-control valid-character">
 										</div>
 									</div>
 								</div>
@@ -338,7 +338,7 @@
 				<div class="container">
 					<div class="d-flex align-items-stretch">
 						<div class="pt-logo mr-auto">
-							<a href="index.html"><img src="assets/images/logo-white.png" alt=""/></a>
+							<a href="index.html"><img src="PreReq/images/logo-white.png" alt=""/></a>
 						</div>
 						<div class="pt-social-link">
 							<ul class="list-inline m-a0">
@@ -361,7 +361,7 @@
                             <h5 class="footer-title">Sign Up For A Newsletter</h5>
 							<p class="text-capitalize m-b20">Weekly Breaking news analysis and cutting edge advices on job searching.</p>
                             <div class="subscribe-form m-b20">
-								<form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">
+								<form class="subscription-form" action="http://educhamp.themetrades.com/demo/PreReq/script/mailchamp.php" method="post">
 									<div class="ajax-message"></div>
 									<div class="input-group">
 										<input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
@@ -414,14 +414,14 @@
                         <div class="widget widget_gallery gallery-grid-4">
                             <h5 class="footer-title">Our Gallery</h5>
                             <ul class="magnific-image">
-								<li><a href="assets/images/gallery/pic1.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic1.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic2.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic2.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic3.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic3.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic4.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic4.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic5.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic5.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic6.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic6.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic7.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic7.jpg" alt=""></a></li>
-								<li><a href="assets/images/gallery/pic8.jpg" class="magnific-anchor"><img src="assets/images/gallery/pic8.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic1.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic1.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic2.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic2.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic3.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic3.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic4.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic4.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic5.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic5.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic6.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic6.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic7.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic7.jpg" alt=""></a></li>
+								<li><a href="PreReq/images/gallery/pic8.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic8.jpg" alt=""></a></li>
 							</ul>
                         </div>
                     </div>
@@ -441,20 +441,20 @@
     <button class="back-to-top fa fa-chevron-up" ></button>
 </div>
 <!-- External JavaScripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/vendors/bootstrap/js/popper.min.js"></script>
-<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="assets/vendors/magnific-popup/magnific-popup.js"></script>
-<script src="assets/vendors/counter/waypoints-min.js"></script>
-<script src="assets/vendors/counter/counterup.min.js"></script>
-<script src="assets/vendors/imagesloaded/imagesloaded.js"></script>
-<script src="assets/vendors/masonry/masonry.js"></script>
-<script src="assets/vendors/masonry/filter.js"></script>
-<script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
-<script src="assets/js/functions.js"></script>
-<script src="assets/js/contact.js"></script>
+<script src="PreReq/js/jquery.min.js"></script>
+<script src="PreReq/vendors/bootstrap/js/popper.min.js"></script>
+<script src="PreReq/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="PreReq/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="PreReq/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="PreReq/vendors/magnific-popup/magnific-popup.js"></script>
+<script src="PreReq/vendors/counter/waypoints-min.js"></script>
+<script src="PreReq/vendors/counter/counterup.min.js"></script>
+<script src="PreReq/vendors/imagesloaded/imagesloaded.js"></script>
+<script src="PreReq/vendors/masonry/masonry.js"></script>
+<script src="PreReq/vendors/masonry/filter.js"></script>
+<script src="PreReq/vendors/owl-carousel/owl.carousel.js"></script>
+<script src="PreReq/js/functions.js"></script>
+<script src="PreReq/js/contact.js"></script>
 <script src='../../www.google.com/recaptcha/api.js'></script>
 </body>
 
