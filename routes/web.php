@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\participate;
 use App\Models\User;
-
+use App\Http\Controllers\PHPMailerController;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Rules\MatchOldPassword;
 use App\Http\Controllers\EventCRUDController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,11 +27,16 @@ Route::resource('events', EventCRUDController::class)->middleware('auth');
 
 Route::get('/userProfile',function () {
     $data['User'] =  auth()->user();
+
+
     return view('userProfile',$data);
 })->middleware('auth')->name("userProfile");;
 
 Route::get('/Profile',function () {
     $data['User'] =  auth()->user();
+    $data['Events']=participate::with('Event')->where('user_id',auth()->user()->id) ->orderBy('id','desc')->get();
+    $t= participate::with('Event')->where('user_id',auth()->user()->id) ->orderBy('id','desc')->get();
+  dd($t[0]->Event );
     return view('Profile',$data);
 })->middleware('auth')->name("Profile");;
 Route::post('/User',function (Request $request){
@@ -162,9 +169,12 @@ Route::get('/test', function () {
     return view('showStudents');
 });
 
+Route::get("email", [PHPMailerController::class, "email"])->name("email");
 
-Auth::routes();
+Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
 
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Auth::routes();
+
