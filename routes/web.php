@@ -173,6 +173,8 @@ Route::get("email", [PHPMailerController::class, "email"])->name("email");
 
 Route::post("send-email", [PHPMailerController::class, "composeEmail"])->name("send-email");
 
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
 
