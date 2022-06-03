@@ -191,7 +191,7 @@
 			</div>
 		</div>
 	</main>
-	<div class="ttr-overlay"></div>
+
 
 <!-- External JavaScripts -->
 <script src="PreReq/js/jquery.min.js"></script>
