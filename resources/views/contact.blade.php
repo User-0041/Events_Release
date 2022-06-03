@@ -264,7 +264,7 @@
 						</div>
 					</div>
 					<div class="col-lg-7 col-md-7">
-						<form  action="{{route('send-email')}}" method="POST" enctype="multipart/form-data" class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/PreReq/script/contact.php">
+						<form  action="{{route('send-email')}}" method="POST" enctype="multipart/form-data" class="contact-bx ajax-form">
 						<div class="ajax-message"></div>
 							<div class="heading-bx left">
 								<h2 class="title-head">Get In <span>Touch</span></h2>
