@@ -70,8 +70,8 @@
 									<option data-icon="flag flag-us">English US</option>
 								</select>
 							</li>
-							<li><a href="login.html">Login</a></li>
-							<li><a href="register.html">Register</a></li>
+							{{-- <li><a href="login.html">Login</a></li>
+							<li><a href="register.html">Register</a></li> --}}
 						</ul>
 					</div>
 				</div>
@@ -180,28 +180,8 @@
 									<li><a href="blog-details.html">Blog Details</a></li>
 								</ul>
 							</li>
-							<li class="nav-dashboard"><a href="javascript:;">Dashboard <i class="fa fa-chevron-down"></i></a>
-								<ul class="sub-menu">
-									<li><a href="admin/index.html">Dashboard</a></li>
-									<li><a href="admin/add-listing.html">Add Listing</a></li>
-									<li><a href="admin/bookmark.html">Bookmark</a></li>
-									<li><a href="admin/courses.html">Courses</a></li>
-									<li><a href="admin/review.html">Review</a></li>
-									<li><a href="admin/teacher-profile.html">Teacher Profile</a></li>
-									<li><a href="admin/user-profile.html">User Profile</a></li>
-									<li><a href="javascript:;">Calendar<i class="fa fa-angle-right"></i></a>
-										<ul class="sub-menu">
-											<li><a href="admin/basic-calendar.html">Basic Calendar</a></li>
-											<li><a href="admin/list-view-calendar.html">List View Calendar</a></li>
-										</ul>
-									</li>
-									<li><a href="javascript:;">Mailbox<i class="fa fa-angle-right"></i></a>
-										<ul class="sub-menu">
-											<li><a href="admin/mailbox.html">Mailbox</a></li>
-											<li><a href="admin/mailbox-compose.html">Compose</a></li>
-											<li><a href="admin/mailbox-read.html">Mail Read</a></li>
-										</ul>
-									</li>
+
+
 								</ul>
 							</li>
 						</ul>
@@ -264,17 +244,13 @@
 								<div class="profile-tabnav">
 									<ul class="nav nav-tabs">
 										<li class="nav-item">
-											<a class="nav-link active" data-toggle="tab" href="#courses"><i class="ti-book"></i>Courses</a>
+											<a class="nav-link active"  href="{{ route('Profile') }}"><i class="ti-book"></i>Events</a>
 										</li>
+
 										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#quiz-results"><i class="ti-bookmark-alt"></i>Quiz Results </a>
+											<a class="nav-link"  href="{{ route('userProfile') }}"><i class="ti-pencil-alt"></i>Edit Profile</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#edit-profile"><i class="ti-pencil-alt"></i>Edit Profile</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-toggle="tab" href="#change-password"><i class="ti-lock"></i>Change Password</a>
-										</li>
+
 									</ul>
 								</div>
 							</div>
@@ -304,19 +280,19 @@
 										</div>
 										<div class="courses-filter">
 											<div class="clearfix">
-                                                @foreach ($Events as $event )
+
 
 
 												<ul style="list-style: none" id="masonry" class="ttr-gallery-listing magnific-image row">
-													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
+                                                    @foreach ($Events as $event )
+                                                    <li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
-															<div class="action-box">
-																<img src="{{ $event->Event->env_pic}}" alt="">
-																<a href="#" class="btn">Read More</a>
+															<div >
+																<img src="{{ $event->Event->ev_pic}}" alt="">
 															</div>
 															<div class="info-bx text-center">
-																<h5><a href="">{{ $event->Event->env_name}}</a></h5>
-																<span>Programming</span>
+																<h5></a></h5>
+																<span>{{ $event->Event->ev_name}}</span>
 															</div>
 															<div class="cours-more-info">
 																{{-- <div class="review">
@@ -330,321 +306,29 @@
 																	</ul>
 																</div> --}}
 																<div class="price">
-																	<del>$190</del>
-																	<h5>$120</h5>
+
+																	<h5>{{$event->Event->ev_price}}</h5>
 																</div>
 															</div>
 														</div>
 													</li>
-
+                                                    @endforeach
 												</ul>
-                                                @endforeach
+
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane" id="quiz-results">
-										<div class="profile-head">
-											<h3>Quiz Results</h3>
-										</div>
-										<div class="courses-filter">
-											<div class="row">
-												<div class="col-md-6 col-lg-6">
-													<ul class="course-features">
-														<li><i class="ti-book"></i> <span class="label">Lectures</span> <span class="value">8</span></li>
-														<li><i class="ti-help-alt"></i> <span class="label">Quizzes</span> <span class="value">1</span></li>
-														<li><i class="ti-time"></i> <span class="label">Duration</span> <span class="value">60 hours</span></li>
-														<li><i class="ti-stats-up"></i> <span class="label">Skill level</span> <span class="value">Beginner</span></li>
-														<li><i class="ti-smallcap"></i> <span class="label">Language</span> <span class="value">English</span></li>
-														<li><i class="ti-user"></i> <span class="label">Students</span> <span class="value">32</span></li>
-														<li><i class="ti-check-box"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
-													</ul>
-												</div>
-												<div class="col-md-6 col-lg-6">
-													<ul class="course-features">
-														<li><i class="ti-book"></i> <span class="label">Lectures</span> <span class="value">8</span></li>
-														<li><i class="ti-help-alt"></i> <span class="label">Quizzes</span> <span class="value">1</span></li>
-														<li><i class="ti-time"></i> <span class="label">Duration</span> <span class="value">60 hours</span></li>
-														<li><i class="ti-stats-up"></i> <span class="label">Skill level</span> <span class="value">Beginner</span></li>
-														<li><i class="ti-smallcap"></i> <span class="label">Language</span> <span class="value">English</span></li>
-														<li><i class="ti-user"></i> <span class="label">Students</span> <span class="value">32</span></li>
-														<li><i class="ti-check-box"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
-													</ul>
-												</div>
+
+
+
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane" id="edit-profile">
-										<div class="profile-head">
-											<h3>Edit Profile</h3>
-										</div>
-										<form class="edit-profile">
-											<div class="">
-												<div class="form-group row">
-													<div class="col-12 col-sm-9 col-md-9 col-lg-10 ml-auto">
-														<h3>1. Personal Details</h3>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Full Name</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="Mark Andre">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Occupation</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="CTO">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Company Name</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="EduChamp">
-														<span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Phone No.</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="+120 012345 6789">
-													</div>
-												</div>
 
-												<div class="seperator"></div>
-
-												<div class="form-group row">
-													<div class="col-12 col-sm-9 col-md-9 col-lg-10 ml-auto">
-														<h3>2. Address</h3>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Address</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="5-S2-20 Dummy City, UK">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">City</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="US">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">State</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="California">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Postcode</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="000702">
-													</div>
-												</div>
-
-												<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-
-												<div class="form-group row">
-													<div class="col-12 col-sm-9 col-md-9 col-lg-10 ml-auto">
-														<h3 class="m-form__section">3. Social Links</h3>
-													</div>
-												</div>
-
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Linkedin</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="www.linkedin.com">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Facebook</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="www.facebook.com">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Twitter</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="www.twitter.com">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-3 col-md-3 col-lg-2 col-form-label">Instagram</label>
-													<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-														<input class="form-control" type="text" value="www.instagram.com">
-													</div>
-												</div>
-											</div>
-											<div class="">
-												<div class="">
-													<div class="row">
-														<div class="col-12 col-sm-3 col-md-3 col-lg-2">
-														</div>
-														<div class="col-12 col-sm-9 col-md-9 col-lg-7">
-															<button type="reset" class="btn">Save changes</button>
-															<button type="reset" class="btn-secondry">Cancel</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-									<div class="tab-pane" id="change-password">
-										<div class="profile-head">
-											<h3>Change Password</h3>
-										</div>
-										<form class="edit-profile">
-											<div class="">
-												<div class="form-group row">
-													<div class="col-12 col-sm-8 col-md-8 col-lg-9 ml-auto">
-														<h3>Password</h3>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-4 col-md-4 col-lg-3 col-form-label">Current Password</label>
-													<div class="col-12 col-sm-8 col-md-8 col-lg-7">
-														<input class="form-control" type="password" value="">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-4 col-md-4 col-lg-3 col-form-label">New Password</label>
-													<div class="col-12 col-sm-8 col-md-8 col-lg-7">
-														<input class="form-control" type="password" value="">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-4 col-md-4 col-lg-3 col-form-label">Re Type New Password</label>
-													<div class="col-12 col-sm-8 col-md-8 col-lg-7">
-														<input class="form-control" type="password" value="">
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-12 col-sm-4 col-md-4 col-lg-3">
-												</div>
-												<div class="col-12 col-sm-8 col-md-8 col-lg-7">
-													<button type="reset" class="btn">Save changes</button>
-													<button type="reset" class="btn-secondry">Cancel</button>
-												</div>
-											</div>
-
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-            </div>
-        </div>
-		<!-- contact area END -->
     </div>
     <!-- Content END-->
 	<!-- Footer ==== -->
-    <footer>
-        <div class="footer-top">
-			<div class="pt-exebar">
-				<div class="container">
-					<div class="d-flex align-items-stretch">
-						<div class="pt-logo mr-auto">
-							<a href="index.html"><img src="PreReq/images/logo-white.png" alt=""/></a>
-						</div>
-						<div class="pt-social-link">
-							<ul class="list-inline m-a0">
-								<li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-						<div class="pt-btn-join">
-							<a href="#" class="btn ">Join Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-            <div class="container">
-                <div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
-                        <div class="widget">
-                            <h5 class="footer-title">Sign Up For A Newsletter</h5>
-							<p class="text-capitalize m-b20">Weekly Breaking news analysis and cutting edge advices on job searching.</p>
-                            <div class="subscribe-form m-b20">
-								<form class="subscription-form" action="http://educhamp.themetrades.com/demo/PreReq/script/mailchamp.php" method="post">
-									<div class="ajax-message"></div>
-									<div class="input-group">
-										<input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
-										<span class="input-group-btn">
-											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
-										</span>
-									</div>
-								</form>
-							</div>
-                        </div>
-                    </div>
-					<div class="col-12 col-lg-5 col-md-7 col-sm-12">
-						<div class="row">
-							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
-								<div class="widget footer_widget">
-									<h5 class="footer-title">Company</h5>
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about-1.html">About</a></li>
-										<li><a href="faq-1.html">FAQs</a></li>
-										<li><a href="contact-1.html">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
-								<div class="widget footer_widget">
-									<h5 class="footer-title">Get In Touch</h5>
-									<ul>
-										<li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
-										<li><a href="blog-classic-grid.html">Blog</a></li>
-										<li><a href="portfolio.html">Portfolio</a></li>
-										<li><a href="event.html">Event</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
-								<div class="widget footer_widget">
-									<h5 class="footer-title">Courses</h5>
-									<ul>
-										<li><a href="courses.html">Courses</a></li>
-										<li><a href="courses-details.html">Details</a></li>
-										<li><a href="membership.html">Membership</a></li>
-										<li><a href="profile.html">Profile</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-                    </div>
-					<div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
-                        <div class="widget widget_gallery gallery-grid-4">
-                            <h5 class="footer-title">Our Gallery</h5>
-                            <ul class="magnific-image">
-								<li><a href="PreReq/images/gallery/pic1.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic1.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic2.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic2.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic3.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic3.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic4.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic4.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic5.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic5.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic6.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic6.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic7.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic7.jpg" alt=""></a></li>
-								<li><a href="PreReq/images/gallery/pic8.jpg" class="magnific-anchor"><img src="PreReq/images/gallery/pic8.jpg" alt=""></a></li>
-							</ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="https://www.templateshub.net">Templates Hub</a></div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <!-- Footer END ==== -->
     <button class="back-to-top fa fa-chevron-up" ></button>
 </div>

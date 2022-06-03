@@ -53,7 +53,7 @@
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
 
 	<!-- header start -->
-	<header class="ttr-header">
+
 		<div class="ttr-header-wrapper">
 			<!--sidebar menu toggler start -->
 			<div class="ttr-toggle-sidebar ttr-material-button">
@@ -226,7 +226,7 @@
 			</div>
 			<!--header search panel end -->
 		</div>
-	</header>
+	=
 	<!-- header end -->
 	<!-- Left sidebar menu start -->
 	<div class="ttr-sidebar">
@@ -317,7 +317,7 @@
 		                </a>
 		                <ul>
 		                	<li>
-		                		<a href="user-profile.html" class="ttr-material-button"><span class="ttr-   label">User Profile</span></a>
+		                		<a href="user-profile.html" class="ttr-material-button"><span class="ttr-label">User Profile</span></a>
 		                	</li>
 		                	<li>
 		                		<a href="teacher-profile.html" class="ttr-material-button"><span class="ttr-label">Teacher Profile</span></a>
